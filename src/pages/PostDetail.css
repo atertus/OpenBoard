@@ -1,0 +1,109 @@
+.post-detail {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .top-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .nav-button {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-button:hover {
+    background-color: #646cff;
+  }
+  
+  .post-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .post-date {
+    color: gray;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+  }
+  
+  .post-content {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .post-upvotes {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .upvote-button {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .upvote-button:hover {
+    background-color: #646cff;
+  }
+  
+  .post-image-container {
+    margin-top: 30px;
+  }
+  
+  .post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  
+  .comment-section {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .comment {
+    background: #6c00c5;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  
+  .comment-form {
+    margin-top: 20px;
+  }
+  
+  .comment-form input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .submit-comment-button {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-comment-button:hover {
+    background-color: #646cff;
+  }
+  
