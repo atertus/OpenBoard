@@ -62,4 +62,4 @@ The project is built using React, Supabase, and modern responsive design techniq
 - Users can modify Title, Content, and Image URL.
 - Edits do not delete existing comments or upvotes.
 
-Alexander Tertus z23630485
+https://openboardv1.netlify.app/
