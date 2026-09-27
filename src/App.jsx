@@ -110,7 +110,6 @@ function Layout({ posts, visibleCount, setSortMode, sortMode, searchTerm, setSea
     <>
       <header>
         <h1>Welcome to OpenBoard!</h1>
-        <h3>Alexander Tertus z23630485</h3>
         <nav>
          
             <h2><Link to="/">Home</Link></h2>

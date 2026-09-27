@@ -3,15 +3,37 @@ import { useNavigate } from 'react-router-dom';
 import './CreatePost.css';
 import { supabase } from '../client';
 
-// Helper function to fix Imgur URLs
+// Helper function to fix Imgur URLs to direct image links
 function fixImgurUrl(url) {
   if (!url) return '';
-  if (url.includes('imgur.com') && !url.includes('i.imgur.com')) {
-    const parts = url.split('/');
-    const id = parts[parts.length - 1];
-    return `https://i.imgur.com/${id}.png`; // Default to .png
+
+  const cleanedUrl = url.trim();
+
+  if (!cleanedUrl.startsWith('http')) return cleanedUrl;
+
+  if (cleanedUrl.includes('i.imgur.com')) {
+    return cleanedUrl;
   }
-  return url;
+
+  if (cleanedUrl.includes('imgur.com')) {
+    try {
+      const parsed = new URL(cleanedUrl);
+      const segments = parsed.pathname.split('/').filter(Boolean);
+
+      // imgur.com/a/abcd or imgur.com/gallery/abcd or imgur.com/abcd
+      const imageId = segments.findLast((segment) => {
+        return segment !== 'a' && segment !== 'gallery' && segment !== 't' && segment !== 'image';
+      });
+
+      if (imageId) {
+        return `https://i.imgur.com/${imageId}.png`;
+      }
+    } catch {
+      // Fallback for malformed urls
+    }
+  }
+
+  return cleanedUrl;
 }
 
 const CreatePost = () => {
