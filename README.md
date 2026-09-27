@@ -63,3 +63,5 @@ The project is built using React, Supabase, and modern responsive design techniq
 - Edits do not delete existing comments or upvotes.
 
 https://openboardv1.netlify.app/
+
+https://youtu.be/DjJi8AtEWkA
