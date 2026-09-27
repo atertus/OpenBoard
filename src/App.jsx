@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const fetchPosts = async () => {
       const { data, error } = await supabase
-        .from('PirateHub')
+        .from('OpenBoard')
         .select()
         .order('created_at', { ascending: false });
 
@@ -51,7 +51,7 @@ function App() {
 
   const handleUpvote = async (id, currentUpvotes) => {
     const { error } = await supabase
-      .from('PirateHub')
+      .from('OpenBoard')
       .update({ Upvotes: currentUpvotes + 1 })
       .eq('id', id);
 

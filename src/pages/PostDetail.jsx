@@ -12,7 +12,7 @@ const PostDetail = () => {
   useEffect(() => {
     const fetchPost = async () => {
       const { data, error } = await supabase
-        .from('PirateHub')
+        .from('OpenBoard')
         .select('*')
         .eq('id', id)
         .single();
@@ -31,7 +31,7 @@ const PostDetail = () => {
 
   const handleUpvote = async () => {
     const { error } = await supabase
-      .from('PirateHub')
+      .from('OpenBoard')
       .update({ Upvotes: post.Upvotes + 1 })
       .eq('id', id);
 
@@ -49,7 +49,7 @@ const PostDetail = () => {
       : newComment;
 
     const { error } = await supabase
-      .from('PirateHub')
+      .from('OpenBoard')
       .update({ Comment: updatedComment })
       .eq('id', id);
 

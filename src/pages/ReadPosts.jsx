@@ -7,7 +7,7 @@ const ReadPosts = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             const { data, error } = await supabase
-                .from('PirateHub') // Ensure this matches your Supabase table name
+                .from('OpenBoard') // Ensure this matches your Supabase table name
                 .select()
                 .order('created_at', { ascending: true });
 
@@ -23,7 +23,7 @@ const ReadPosts = () => {
 
     const handleUpvote = async (id, currentUpvotes) => {
         const { data, error } = await supabase
-            .from('PirateHub')
+            .from('OpenBoard')
             .update({ Upvotes: currentUpvotes + 1 })
             .eq('id', id);
 

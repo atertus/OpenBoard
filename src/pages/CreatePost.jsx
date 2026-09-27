@@ -37,7 +37,7 @@ const CreatePost = () => {
     const fixedImgUrl = fixImgurUrl(post.IMG_URL);
 
     const { error } = await supabase
-      .from('PirateHub')
+      .from('OpenBoard')
       .insert({
         Title: post.Title,
         Content: post.Content,

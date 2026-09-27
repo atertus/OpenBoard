@@ -15,7 +15,7 @@ const EditPost = () => {
     useEffect(() => {
         const fetchPost = async () => {
             const { data, error } = await supabase
-                .from('PirateHub') // Ensure this matches your Supabase table name
+                .from('OpenBoard') // Ensure this matches your Supabase table name
                 .select('*')
                 .eq('id', id)
                 .single();
@@ -44,7 +44,7 @@ const EditPost = () => {
     
         try {
             const { data, error } = await supabase
-                .from('PirateHub')
+                .from('OpenBoard')
                 .update({
                     Title: post.Title,
                     Content: post.Content,
@@ -72,7 +72,7 @@ const EditPost = () => {
         event.preventDefault();
         try {
             const { error } = await supabase
-                .from('PirateHub')
+                .from('OpenBoard')
                 .delete()
                 .eq('id', id);
 
